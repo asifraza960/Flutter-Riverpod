@@ -15,8 +15,16 @@ class HomePage extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(name),
-             Text(age.toString())
+            Text(name,style: TextStyle(
+              color: Colors.black,
+              fontSize: 30,
+              fontWeight: FontWeight.bold
+            ),),
+             Text(age.toString(),style: TextStyle(
+              color: Colors.black,
+              wordSpacing: 1,
+              fontSize: 22
+             ),)
           ],
         ),
       ),
