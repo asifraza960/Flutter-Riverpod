@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/simple_riverpod/home.dart';
+import 'package:flutter_application_1/State_Provider/Counterapp.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: ProviderScope(child: HomePage())
+      home: ProviderScope(child: Counterapp())
     );
   }
 }
