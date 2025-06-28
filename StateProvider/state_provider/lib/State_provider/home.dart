@@ -17,12 +17,20 @@ class Home extends ConsumerWidget {
             Consumer(
               builder: (context ,ref , child){
                 final cont = ref.watch(CounterProvider);
+                print("build2");
                 return Center(
                   child: Text(cont.toString()),
                 );
                 
               }
               ),
+              Row(
+                children: [
+                  ElevatedButton(onPressed: (){
+                    ref.read(CounterProvider.notifier).state++;
+                  }, child: Text("+"))
+                ],
+              )
               
              
             

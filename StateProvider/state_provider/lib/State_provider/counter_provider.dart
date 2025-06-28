@@ -1,6 +1,9 @@
 import 'package:riverpod/riverpod.dart';
 
-Provider CounterProvider = Provider <int>((ref){
+
+
+
+
+final  CounterProvider = StateProvider <int>((ref){
 return 0;
-}
-);
+});
