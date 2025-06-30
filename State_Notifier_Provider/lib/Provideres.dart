@@ -8,5 +8,10 @@ final SearchProvider = StateNotifierProvider<Searchstate,String>((ref){
 class Searchstate extends StateNotifier<String>{
   Searchstate () : super ('');
 
-  
+
+  void  Search (String query){
+    state = query;
+  }
+
+
 }
