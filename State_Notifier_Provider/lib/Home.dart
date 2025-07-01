@@ -7,22 +7,27 @@ class Home extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-
-    final search = ref.watch(SearchProvider);
     return Scaffold(
-
-      appBar: AppBar(
-      ),
+      appBar: AppBar(),
       body: Center(
-        child: Column(
-          children: [
-            TextField(
-              onChanged: (value){
-                ref.read(SearchProvider.notifier).Search(value);
-              },
-            ),
-            Text(search)
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              TextField(
+                onChanged: (value) {
+                  ref.read(SearchProvider.notifier).Search(value);
+                },
+              ),
+              Consumer(
+                builder: (child, ref, context) {
+                  final search = ref.watch(SearchProvider);
+                  return Text(search);
+
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

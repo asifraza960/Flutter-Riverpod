@@ -12,6 +12,4 @@ class Searchstate extends StateNotifier<String>{
   void  Search (String query){
     state = query;
   }
-
-
 }
