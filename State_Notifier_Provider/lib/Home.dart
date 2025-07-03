@@ -22,7 +22,11 @@ class Home extends ConsumerWidget {
               Consumer(
                 builder: (child, ref, context) {
                   final search = ref.watch(SearchProvider);
-                  return Text(search);
+                  return Text(search,style: TextStyle(
+                    color: Colors.black,
+                    wordSpacing: 1.0,
+                    fontSize: 22
+                  ),);
 
                 },
               ),
