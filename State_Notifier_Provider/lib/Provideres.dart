@@ -13,3 +13,13 @@ class Searchstate extends StateNotifier<String>{
     state = query;
   }
 }
+
+
+
+// future provider
+final apiprovider = FutureProvider<int>((ref)async{
+  await Future.delayed(Duration(seconds: 1));
+  return 123;
+});
+
+
